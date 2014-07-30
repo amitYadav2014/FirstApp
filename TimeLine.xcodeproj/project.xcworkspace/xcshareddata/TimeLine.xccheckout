@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F37D3ED0-5844-4DED-8FE3-DDD0412F1864</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TimeLine</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F4A6243A-B01B-4805-993F-874E1B9D8DBE</key>
+		<string>https://github.com/amitYadav2014/amitIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TimeLine.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F4A6243A-B01B-4805-993F-874E1B9D8DBE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/amitYadav2014/amitIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F4A6243A-B01B-4805-993F-874E1B9D8DBE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F4A6243A-B01B-4805-993F-874E1B9D8DBE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TimeLine</string>
+		</dict>
+	</array>
+</dict>
+</plist>

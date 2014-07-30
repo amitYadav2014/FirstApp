@@ -41,7 +41,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"Main Array : %@",arrTimeLine);
+   
    return  [arrTimeLine count];
 }
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -80,7 +80,6 @@
     return cell;
 }
 
-
 // Variable height support - delegate method
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -109,8 +108,6 @@
 
 -(void)service
 {
-   
-    
     NSString *url = @"https://alpha-api.app.net/stream/0/posts/stream/global";
     NSMutableURLRequest *request = [NSMutableURLRequest
                                     requestWithURL:[NSURL URLWithString:url]];
@@ -121,9 +118,8 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
      {
-        if (isFirst)
-         [self StopProgressBar:self.view];
-         isFirst= NO;
+        
+         
          
          NSError *err = nil ;
          NSDictionary   *responseDict = [NSJSONSerialization JSONObjectWithData :data options : 0 error :&err];
@@ -146,6 +142,14 @@
              [arrTimeLine addObject:dict];
          }
          
+         // ui update
+         [[NSOperationQueue mainQueue] addOperationWithBlock:^
+          {
+              if (isFirst)
+                  [self StopProgressBar:self.view];
+               isFirst= NO;
+          }];
+        
          self.tblTimeLine.delegate = self;
          self.tblTimeLine.dataSource = self;
         [self.tblTimeLine reloadData];
@@ -192,8 +196,6 @@
     view.userInteractionEnabled = NO;
     self.navigationController.view.userInteractionEnabled = NO;
     [view addSubview:alertView];
-    
-    
 }
 
 -(void)StopProgressBar:(UIView *)view
